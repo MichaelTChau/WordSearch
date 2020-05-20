@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IPk-Xa-wl0">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="375" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oZW-jH-lEw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sVa-iO-Q1h">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9XD-6d-PAW">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-Ud-9kw" customClass="WordGridOverlay" customModule="WordSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="375" height="375"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GgF-bR-MoD">
+                                <rect key="frame" x="18.666666666666657" y="425.33333333333326" width="337.66666666666674" height="324.66666666666674"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GgF-bR-MoD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Mj-2t-F4c"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="height" secondItem="IPk-Xa-wl0" secondAttribute="height" id="BQi-VM-TYw"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="C9E-jI-Sik"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="height" secondItem="sJz-Ud-9kw" secondAttribute="width" id="Hgy-cA-hY1"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="width" secondItem="IPk-Xa-wl0" secondAttribute="width" id="HtB-GN-eDq"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="width" secondItem="IPk-Xa-wl0" secondAttribute="width" id="IeT-nW-z2p"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="centerX" secondItem="IPk-Xa-wl0" secondAttribute="centerX" id="Obs-bE-fE0"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R0K-Bd-QAb"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.6" id="SLg-QF-iew"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.6" id="ZXu-3f-7gH"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" id="ZY4-fV-sJj"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="height" secondItem="sJz-Ud-9kw" secondAttribute="width" id="e4f-QO-UMA"/>
+                            <constraint firstItem="GgF-bR-MoD" firstAttribute="width" secondItem="sJz-Ud-9kw" secondAttribute="width" multiplier="0.9" id="jcI-bh-bmg"/>
+                            <constraint firstItem="IPk-Xa-wl0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="me8-Tr-WNU"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="height" secondItem="IPk-Xa-wl0" secondAttribute="width" id="qhr-c6-lWJ"/>
+                            <constraint firstItem="sJz-Ud-9kw" firstAttribute="centerY" secondItem="IPk-Xa-wl0" secondAttribute="centerY" id="tmr-M2-dBL"/>
+                            <constraint firstItem="GgF-bR-MoD" firstAttribute="top" secondItem="sJz-Ud-9kw" secondAttribute="bottom" constant="10" id="vfF-Tv-JNz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BQi-VM-TYw"/>
+                                <exclude reference="HtB-GN-eDq"/>
+                                <exclude reference="IeT-nW-z2p"/>
+                                <exclude reference="Obs-bE-fE0"/>
+                                <exclude reference="qhr-c6-lWJ"/>
+                                <exclude reference="tmr-M2-dBL"/>
+                                <exclude reference="C9E-jI-Sik"/>
+                                <exclude reference="Hgy-cA-hY1"/>
+                                <exclude reference="R0K-Bd-QAb"/>
+                                <exclude reference="SLg-QF-iew"/>
+                                <exclude reference="ZXu-3f-7gH"/>
+                                <exclude reference="ZY4-fV-sJj"/>
+                                <exclude reference="e4f-QO-UMA"/>
+                                <exclude reference="me8-Tr-WNU"/>
+                                <exclude reference="0Mj-2t-F4c"/>
+                                <exclude reference="jcI-bh-bmg"/>
+                                <exclude reference="vfF-Tv-JNz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="IeT-nW-z2p"/>
+                                <include reference="qhr-c6-lWJ"/>
+                                <include reference="C9E-jI-Sik"/>
+                                <include reference="ZXu-3f-7gH"/>
+                                <include reference="ZY4-fV-sJj"/>
+                                <include reference="e4f-QO-UMA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="BQi-VM-TYw"/>
+                                <include reference="HtB-GN-eDq"/>
+                                <include reference="Obs-bE-fE0"/>
+                                <include reference="tmr-M2-dBL"/>
+                                <include reference="Hgy-cA-hY1"/>
+                                <include reference="R0K-Bd-QAb"/>
+                                <include reference="SLg-QF-iew"/>
+                                <include reference="me8-Tr-WNU"/>
+                                <include reference="0Mj-2t-F4c"/>
+                                <include reference="jcI-bh-bmg"/>
+                                <include reference="vfF-Tv-JNz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="gridView" destination="IPk-Xa-wl0" id="1rS-Rl-udB"/>
+                        <outlet property="swipeView" destination="sJz-Ud-9kw" id="9cF-SR-hpb"/>
+                        <outlet property="wordStackView" destination="GgF-bR-MoD" id="BlU-hC-GY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
