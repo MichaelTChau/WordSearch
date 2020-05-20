@@ -1,7 +1,7 @@
 # WordSearch
 # Start
 <p align="center">
-  <p> Start </p>
+  <h1> Start </h1>
   <img src="Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-05-19%20at%2023.34.47.png" width="350" height="500" title="Start">
 </p>
 ![Alt text](Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-05-19%20at%2023.34.47.png "Start")
